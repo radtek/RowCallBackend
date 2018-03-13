@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180309074103_init.cs" />
+    <Compile Remove="Migrations\20180309074103_init.Designer.cs" />
+    <Compile Remove="Migrations\20180309074312_init.cs" />
+    <Compile Remove="Migrations\20180309074312_init.Designer.cs" />
+    <Compile Remove="Migrations\20180309074437_init.cs" />
+    <Compile Remove="Migrations\20180309074437_init.Designer.cs" />
+    <Compile Remove="Migrations\20180309080445_init.cs" />
+    <Compile Remove="Migrations\20180309080445_init.Designer.cs" />
+    <Compile Remove="Migrations\20180313143418_update.cs" />
+    <Compile Remove="Migrations\20180313143418_update.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+</Project>
