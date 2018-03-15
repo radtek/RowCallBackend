@@ -37,6 +37,6 @@ You will need Visual Studio 2017 with .Net Core 2.x SDK.
 3. Run the following command: EntityFrameworkCore\Update-Database (This will create the database which will contain the users!) 
 
 ### Usage
-
+Coming soon...
 
 # Client (C#)
