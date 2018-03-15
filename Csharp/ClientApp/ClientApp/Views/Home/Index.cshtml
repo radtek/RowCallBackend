@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>User library:</h1>
+
+<button class="btn btn-success" id="addUserBtn">Add random user</button>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+@section Scripts{
+    <script>
+        // Ajax here...
+
+        function updateData() {
+            $("#tableBody").html(" ");
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:1186/api/users",
+                async: true,
+                cache: false,
+                crossDomain: true,
+                contentType: "application/json; charset=utf-8",
+                success: function (responseData, textStatus, jqXHR) {
+                    var value = responseData;
+
+                    $.each(value, function (key, value) {
+                        $("#tableBody").append('<tr><td>' + key + '</td><td>' + value.userName + '</td><td>' + value.email + '</td></tr>')
+                    });
+
+                    console.log(value);
+                },
+                error: function (responseData, textStatus, errorThrown) {
+                    alert('GET failed.');
+                }
+            });
+        }
+
+        function addUser() {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:1186/api/users",
+                async: true,
+                cache: false,
+                crossDomain: true,
+                contentType: "application/json; charset=utf-8",
+                success: function (responseData, textStatus, jqXHR) {
+                    updateData();
+                },
+                error: function (responseData, textStatus, errorThrown) {
+                    alert('POST failed.');
+                }
+            });
+        }
+
+        function CallSoap() {
+            $.soap({
+                url: 'http://my.server.com/soapservices/',
+                method: 'helloWorld',
+
+                data: {
+                    name: 'Remy Blom',
+                    msg: 'Hi!'
+                },
+
+                success: function (soapResponse) {
+                    // do stuff with soapResponse
+                    // if you want to have the response as JSON use soapResponse.toJSON();
+                    // or soapResponse.toString() to get XML string
+                    // or soapResponse.toXML() to get XML DOM
+                },
+                error: function (SOAPResponse) {
+                    // show error
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            updateData();
+            CallSoap();
+
+            $("#addUserBtn").click(function () {
+                console.log("Clicked")
+                addUser();
+            }); 
+
+        });
+
+
+    </script>
+}
