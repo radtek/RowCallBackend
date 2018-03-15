@@ -22,6 +22,8 @@ Teacher has this functionality:
 Webservice is a backend for both of these clients and provides them with all data and they need.
 
 # SOAP Service (Java)
+Main reason why we decided to use SOAP webservice is to fulfill requirements of mandatory assignment for System Integration. 
+For this reason we are using this service for very simple funcitonality (returning a date object).
 
 # REST Service (C#)
 # Client (C#)
