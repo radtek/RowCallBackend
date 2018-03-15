@@ -28,7 +28,15 @@ For this reason we are using this service for very simple funcitonality (returni
 # REST Service (C#)
 This rest can create and retrieve users from a local MSSQL database. 
 
-### Requirements and usage
+### Requirements
+You will need Visual Studio 2017 with .Net Core 2.x SDK. 
+
+### Setup
+1. Clone this repository
+2. Open Package Manager Console (Tools > NugetPackageManager > NugetPackageManagerConsole) 
+3. Run the following command: EntityFrameworkCore\Update-Database (This will create the database which will contain the users!) 
+
+### Usage
 
 
 # Client (C#)
