@@ -26,4 +26,6 @@ Main reason why we decided to use SOAP webservice is to fulfill requirements of 
 For this reason we are using this service for very simple funcitonality (returning a date object).
 
 # REST Service (C#)
+This rest can create and retrieve users from a local MSSQL database. 
+
 # Client (C#)
