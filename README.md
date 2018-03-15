@@ -28,4 +28,7 @@ For this reason we are using this service for very simple funcitonality (returni
 # REST Service (C#)
 This rest can create and retrieve users from a local MSSQL database. 
 
+### Requirements and usage
+
+
 # Client (C#)
