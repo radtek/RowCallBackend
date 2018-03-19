@@ -42,7 +42,19 @@ This is a simple RESTful webservice with 3 methods: Get, GetAll and Create. To u
 
 http://localhost:8080/api/users/{id}
 
-The id parameter is optional and its refering to the user id. It can only be used when calling the GET method (not GetAll!). 
+The id parameter is optional and its refering to the user id. It can only be used when calling the GET method (not GetAll!). The Create method will create a user with a random username and email but the password will always be Password123. 
+
+Extra: 
+
+http://localhost:8080/account/create
+
+This method will create a user and you will need to provide the email and password in the body as json. Use the following template (Username are treated as email and will be validated as a email at the server!): 
+
+{
+  "userName": "YourEmail", 
+  "password": "YourPassword"
+}
+
 
 
 # Client (C#)
