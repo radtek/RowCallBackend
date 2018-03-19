@@ -1,7 +1,7 @@
 # RowCallBackend
 
 ## Structure
-This repository contains code for SOAP service writen in Java, REST service written in C#, client consuming the REST service (made with HTML) and another client consuming the SOAP service made with Java (console application). 
+This repository contains code for SOAP service writen in Java, REST service written in C#, client consuming the REST service (made with HTML) and another client consuming the SOAP service made with Java.  
 
 Code will first be used as a mandatory assignment for System Integration and later on will be refactored into Final project for System Integration and Development of Large Systems.
 
