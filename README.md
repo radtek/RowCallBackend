@@ -25,6 +25,15 @@ Webservice is a backend for both of these clients and provides them with all dat
 Main reason why we decided to use SOAP webservice is to fulfill requirements of mandatory assignment for System Integration. 
 For this reason we are using this service for very simple funcitonality (returning a date object).
 
+### Setup
+Deploy and run the two .war files on your locally hosted server of choice.
+
+### Usage
+In your browser of choice, go to the following URL: 
+http://localhost:8080/MandatorySOAPClient/
+The resulting website you are met with in your browser, comes from a JSP using a SOAP web service to get the current date and time of the server hosting said web service.
+(The date and time displayed, is the date and time of the host server of the SOAP web service.)
+
 # REST Service (C#)
 This rest can create and retrieve users from a local MSSQL database. 
 
