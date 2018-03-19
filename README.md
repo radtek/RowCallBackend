@@ -57,4 +57,5 @@ This method will create a user and you will need to provide the email and passwo
 
 
 
-# Client (C#)
+# Client (HTML)
+This client is made with HTML, CSS and Javascript. Run the RESTful webservice before running the client! It should be ready to go when the webservice is running and you can see all users and create a random one. 
