@@ -42,7 +42,7 @@ This is a simple RESTful webservice with 3 methods: Get, GetAll and Create. To u
 
 http://localhost:8080/api/users/{id}
 
-If you want to create a user you should provide a username and password in the body of the request and set the request method as POST and otherwise use GET. The id parameter is optional and its refering to the user id. It can only be used when calling the GET method (not GetAll!). 
+The id parameter is optional and its refering to the user id. It can only be used when calling the GET method (not GetAll!). 
 
 
 # Client (C#)
