@@ -37,9 +37,12 @@ You will need Visual Studio 2017 with .Net Core 2.x SDK.
 3. Run the following command: EntityFrameworkCore\Update-Database (This will create the database which will contain the users!) 
 
 ### Usage
-You can choose to use either the client we made or your own (PostMan, Fiddler etc.)
+You can choose to use either the client we made or your own (PostMan, Fiddler etc.).
+This is a simple RESTful webservice with 3 methods: Get, GetAll and Create. To use these methods use the following URL: 
 
-This is a simple RESTful web with 3 basic methods: Get, GetAll and Create (GET, GET and POST). 
+http://localhost:8080/api/users/{id}
+
+If you want to create a user you should provide a username and password in the body of the request and set the request method as POST and otherwise use GET. The id parameter is optional and its refering to the user id. It can only be used when calling the GET method (not GetAll!). 
 
 
 # Client (C#)
