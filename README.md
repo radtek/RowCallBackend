@@ -1,7 +1,7 @@
 # RowCallBackend
 
 ## Structure
-This repository contains code for SOAP service writen in Java, REST service written in C# and client consuming both of these services that is written in C# as well.
+This repository contains code for SOAP service writen in Java, REST service written in C#, client consuming the rest service (made with HTML) and another client made with Java (console application). 
 
 Code will first be used as a mandatory assignment for System Integration and later on will be refactored into Final project for System Integration and Development of Large Systems.
 
@@ -37,6 +37,9 @@ You will need Visual Studio 2017 with .Net Core 2.x SDK.
 3. Run the following command: EntityFrameworkCore\Update-Database (This will create the database which will contain the users!) 
 
 ### Usage
-Coming soon...
+You can choose to use either the client we made or your own (PostMan, Fiddler etc.)
+
+This is a simple RESTful web with 3 basic methods: Get, GetAll and Create (GET, GET and POST). 
+
 
 # Client (C#)
