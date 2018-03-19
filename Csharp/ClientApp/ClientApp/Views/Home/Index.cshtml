@@ -63,29 +63,32 @@
         }
 
         function CallSoap() {
+            console.log("Soap beginning !")
             $.soap({
-                url: 'http://my.server.com/soapservices/',
-                method: 'helloWorld',
+                url: 'http://localhost:9000/GetDate?wsdl',
+                method: 'getDate',
 
-                data: {
-                    name: 'Remy Blom',
-                    msg: 'Hi!'
-                },
-
-                success: function (soapResponse) {
+                success: function (soapResponse)
+                {
                     // do stuff with soapResponse
+                    console.log('No Error!')
+                    console.log(soapResponse)
+
                     // if you want to have the response as JSON use soapResponse.toJSON();
                     // or soapResponse.toString() to get XML string
                     // or soapResponse.toXML() to get XML DOM
                 },
-                error: function (SOAPResponse) {
+                error: function (soapResponse)
+                {
+                    console.log("Error maan!!")
                     // show error
                 }
             });
+            console.log("Bottom")
         }
 
         $(document).ready(function () {
-            updateData();
+            //updateData();
             CallSoap();
 
             $("#addUserBtn").click(function () {

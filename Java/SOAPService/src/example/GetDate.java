@@ -17,7 +17,7 @@ public class GetDate
   public static void main(String[] argv)
   {
     Object implementor = new GetDate();
-    String address = "http://localhost:9000/Date";
+    String address = "http://localhost:9000/GetDate";
     Endpoint.publish(address, implementor);
     System.out.println("Server is running");
   }
